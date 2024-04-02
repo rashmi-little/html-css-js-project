@@ -1,0 +1,30 @@
+button {
+    background-color: rgba(230, 83, 20, 0.753);
+    border-radius: 3px;
+    color: white;
+    border: none;
+    padding: 2px;
+    width: 80px;
+    margin-left: 1rem;
+}
+
+.container {
+    padding: 1rem;
+    text-align: center;
+}
+
+.done {
+    background-color: grey;
+}
+
+#todo-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#todo-list div {
+    margin-inline: auto;
+    margin-block: 10px;
+    width: 40%;
+}

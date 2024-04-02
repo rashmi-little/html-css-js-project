@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: quicksand, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.card-map {
+  width: 35rem;
+}
+
+.card-chip {
+  width: 6rem;
+}
+
+i {
+  font-size: 3rem;
+  color: #555;
+}
+.toggle {
+  height: 6rem;
+  width: 6rem;
+  position: absolute;
+  top: 7rem;
+  right: 7rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: beige;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: 50rem;
+  height: 25rem;
+  border-radius: 2rem;
+  position: relative;
+  display: flex;
+  box-shadow: 1rem 1rem 3rem rgba(1, 0, 0, 0.6);
+}
+
+.card-map {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.3;
+}
+
+.card-left {
+  z-index: 10;
+  width: 70%;
+  height: 100%;
+  padding: 1rem 0rem 1rem 3rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #777;
+}
+
+.card-type {
+  font-size: 2rem;
+  letter-spacing: 0.4rem;
+}
+
+.card-num {
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  font-weight: 500;
+}
+
+.card-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.card-date {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.card-holder {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.right {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    z-index: 10;
+}
+
+.red-circle {
+    background-color: red;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+.orange-circle {
+    background-color: orange;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    margin-left: -2rem;
+    opacity: 0.8;
+}
+
+.container.dark {
+    background-color: #262626;
+}
+
+.container.dark .toggle {
+    background-color: #464646;
+}
+.container.dark .toggle i{
+    color: #ccc;
+}
+
+.container.dark .card-left {
+    color: #ccc;
+}
