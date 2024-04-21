@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+    </style>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inputSection">
+        <input type="text" id="result" value="Deafult Password" readonly />
+        <button id="copy">Copy</button>
+      </div>
+
+      <div class="progressSection">
+        <input type="range" id="scroll" min="6" max="16" value="6"/>
+        <span>6</span>
+      </div>
+
+      <div class="optionSection">
+        <div class="option">
+          <input type="checkbox" checked id="lowercase"/>
+          <label for="">a-z</label>
+        </div>
+
+        <div class="option">
+          <input type="checkbox" id="uppercase" checked /> <label for="">A-Z</label>
+        </div>
+        <div class="option">
+          <input type="checkbox" id="number" checked /> <label for="">0-9</label>
+        </div>
+
+        <div class="option">
+          <input type="checkbox" id="special" checked /> <label for="">!@#$%</label>
+        </div>
+      </div>
+      <div class="genrateSection">
+        <button id="submit">Generate</button>
+      </div>
+    </div>
+  </body>
+</html>

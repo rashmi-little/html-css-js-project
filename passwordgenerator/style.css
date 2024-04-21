@@ -1,0 +1,101 @@
+:root {
+  --primary-color: rgb(2, 67, 107);
+  --secodary-color: rgb(24, 119, 172);
+  --tersary-color: rgb(2, 82, 131);
+  --option-color: rgb(0, 54, 82);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rebeccapurple;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  min-width: 400px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: var(--primary-color);
+  display: grid;
+  gap: 1rem;
+}
+
+#submit {
+  width: 100%;
+}
+
+#result {
+  background-color: var(--secodary-color);
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+  padding: 0.5rem;
+  color: white;
+  font-weight: 600;
+}
+
+#copy {
+  border-radius: 0 10px 10px 0;
+  border: none;
+  outline: none;
+  background-color: var(--tersary-color);
+  color: white;
+}
+
+#copy:hover {
+    background-color: var(--option-color);
+}
+
+.inputSection {
+  display: grid;
+  grid-template-columns: auto 60px;
+}
+
+.progressSection {
+  display: grid;
+  grid-template-columns: auto 40px;
+  column-gap: 1rem;
+}
+.optionSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.genrateSection > button {
+  padding-block: 0.5rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: var(--secodary-color);
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.option {
+  background-color: var(--option-color);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.6rem;
+}
+
+span {
+  padding: 0.5rem;
+  background-color: var(--option-color);
+  text-align: center;
+  color: white;
+}
+
+label {
+  margin-left: 10px;
+  font-size: 1rem;
+}
