@@ -14,32 +14,26 @@ function generatePassword() {
   }
 
   let selection = [];
-  if(lowerCase.checked === true) 
-  selection.push(generateLowercase);
-  if(uppercase.checked === true) 
-  selection.push(generateUppercase);
-  if(number.checked === true) 
-  selection.push(generateNumber);
-  if(special.checked === true) 
-  selection.push(generateSpecial);
-
+  if (lowerCase.checked === true) selection.push(generateLowercase);
+  if (uppercase.checked === true) selection.push(generateUppercase);
+  if (number.checked === true) selection.push(generateNumber);
+  if (special.checked === true) selection.push(generateSpecial);
 
   result.value = combinePassword(selection);
 }
 
 function combinePassword(selection) {
-
   let use = [...selection];
   let count = 0;
-  let result = '';
+  let result = "";
 
   while (count != range.value) {
-    if(use.length === 0) {
-        use = [...selection];
+    if (use.length === 0) {
+      use = [...selection];
     }
-    const randomIndex = Math.floor(Math.random() * 100 % use.length);
+    const randomIndex = Math.floor((Math.random() * 100) % use.length);
     result = result.concat(use[randomIndex]());
-    use.splice(randomIndex,1);
+    use.splice(randomIndex, 1);
     count++;
   }
 
@@ -68,7 +62,7 @@ function copyResult() {
 }
 
 function generateLowercase() {
-  const allowedChar = 'abcdefghijklmnopqrstuvwxyz';
+  const allowedChar = "abcdefghijklmnopqrstuvwxyz";
   const randomIndex = (Math.random() * 100) % 26;
 
   return allowedChar.charAt(randomIndex);
@@ -77,17 +71,19 @@ function generateUppercase() {
   return generateLowercase().toUpperCase();
 }
 function generateNumber() {
-  const allowedChar = '0123456789';
+  const allowedChar = "0123456789";
   const randomIndex = (Math.random() * 100) % 10;
 
   return allowedChar.charAt(randomIndex);
 }
 function generateSpecial() {
-  const allowedChar = '!@#$%';
+  const allowedChar = "!@#$%";
   const randomIndex = (Math.random() * 100) % 5;
 
   return allowedChar.charAt(randomIndex);
 }
-[...document.querySelectorAll('input[type="checkbox"]'), generate].map(element => element.addEventListener('click', generatePassword));
+[...document.querySelectorAll('input[type="checkbox"]'), generate].map(
+  (element) => element.addEventListener("click", generatePassword)
+);
 range.addEventListener("change", () => (rangeValue.textContent = range.value));
 copy.addEventListener("click", copyResult);
