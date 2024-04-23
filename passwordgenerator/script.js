@@ -8,8 +8,8 @@ const number = document.getElementById("number");
 const special = document.getElementById("special");
 const generate = document.getElementById("submit");
 
-function generatePassword() {
-  if (customErrorHandler()) {
+function generatePassword(e) {
+  if (customErrorHandler(e)) {
     return;
   }
 
@@ -40,14 +40,13 @@ function combinePassword(selection) {
   return result;
 }
 
-function customErrorHandler() {
-  if (
-    lowerCase.checked === false &&
-    uppercase.checked === false &&
-    special.checked === false &&
-    number.checked === false
-  ) {
+function customErrorHandler(e) {
+  const allCheckBox = [
+    ...document.querySelectorAll('input[type="checkbox"]'),
+  ].filter((box) => box.checked);
+  if (allCheckBox.length == 0) {
     alert("Please select at least one option");
+    e.target.checked = true;
     return true;
   }
 }
